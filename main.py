@@ -18,11 +18,15 @@ y = np.array(x[1:])
 model = LinearRegression()
 model.fit(X, y)
 
+# Step 4: Predict using learned model
+y_pred = model.predict(X)
+
 print("True coefficient:", a)
 print("Learned coefficient:", model.coef_[0])
 
 # Step 4: Plot results
-plt.plot(x, label="System Output")
-plt.title("Simulated Dynamical System")
+plt.plot(y, label="True Output")
+plt.plot(y_pred, label="Predicted Output", linestyle='--')
+plt.title("System Identification: True vs Predicted")
 plt.legend()
 plt.show()
