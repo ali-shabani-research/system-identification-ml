@@ -8,7 +8,7 @@ a = 0.8
 x = [1]
 
 for t in range(T):
-    x.append(a * x[-1] + 0.2 * x[-1]**2 + np.random.normal(0, 0.1))
+    x.append(a * x[-1] + 0.02 * x[-1]**2 + np.random.normal(0, 0.1))
 
 # Step 2: Prepare data for learning
 X = np.array(x[:-1]).reshape(-1, 1)
